@@ -1,0 +1,48 @@
+@import "variables";
+
+.nft-tabs {
+  .ant-tabs-tab {
+    color: $gray-color-200;
+  }
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn,
+  .ant-tabs-tab-btn:focus,
+  .ant-tabs-tab-remove:focus,
+  .ant-tabs-tab-btn:active,
+  .ant-tabs-tab-remove:active,
+  .ant-tabs-tab:hover {
+    color: #fff;
+  }
+
+  .ant-tabs-ink-bar {
+    background-color: $primary-color;
+  }
+
+  &.large {
+    & > .ant-tabs-nav {
+      .ant-tabs-tab {
+        font-size: 18px;
+        padding: 0.7rem 1rem;
+      }
+
+      .ant-tabs-ink-bar {
+        height: 3px;
+      }
+    }
+  }
+
+  &.big {
+    & > .ant-tabs-nav {
+      .ant-tabs-tab {
+        font-size: 20px;
+        padding: 1rem 3rem;
+        &.ant-tabs-tab-active {
+          font-weight: 500;
+        }
+      }
+
+      .ant-tabs-ink-bar {
+        height: 4px;
+      }
+    }
+  }
+}

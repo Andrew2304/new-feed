@@ -1,0 +1,40 @@
+@import "variables";
+.table-nft {
+  .ant-table {
+    font-size: 16px;
+  }
+
+  .ant-table-thead > tr > th {
+    color: $gray-color-100;
+    background: $bg-left;
+    font-weight: 400;
+
+    &::before{
+      content: none !important;
+    }
+  }
+  .ant-table-tbody > tr > td {
+    background: $bg-left;
+    color: $gray-color-50;
+  }
+
+  .ant-table-filter-column{
+    justify-content: normal;
+
+    .ant-table-column-title{
+      flex: none;
+    }
+
+    .ant-table-filter-trigger{
+      background-color: transparent !important;
+    }
+
+    .ant-dropdown-open{
+      color: $primary-color;
+    }
+  }
+
+  .ant-pagination{
+    margin-top: 2rem;
+  }
+}
