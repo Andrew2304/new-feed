@@ -97,44 +97,6 @@ const GetFileType = (filename)=>{
 const DateFormatNft = "dd/mm/yyyy hh:MM";
 const DateFormatCollection = "dd/mm/yyyy";
 const DefaultPageSize = 15;
-const StatusNft = {
-    MintSuccess: "Mint th\xe0nh c\xf4ng",
-    MintFailed: "Mint Thất bại",
-    Bidding: "Đang đấu gi\xe1",
-    Selling: "Đang b\xe1n",
-    Sold: "Đ\xe3 b\xe1n",
-    Tranfered: "Đ\xe3 chuyển",
-    Cancelled: "Cancelled"
-};
-const StatusAccount = {
-    verifed: "Đ\xe3 x\xe1c minh",
-    unverified: "Chưa x\xe1c minh"
-};
-const FilterAmount = {
-    increase: "Từ thấp đến cao",
-    decrease: "Từ cao đến thấp"
-};
-const TstTypeOfWallet = {
-    MintNft: "Mint NFT",
-    BuyNft: "Mua NFT",
-    SellNft: "B\xe1n NFT",
-    MintCompensate: "Ho\xe0n tiền",
-    Deposit: "Nạp tiền",
-    Withdrawal: "R\xfat tiền",
-    BidNft: "Đặt gi\xe1",
-    ReleaseBid: "Ho\xe0n tiền đặt gi\xe1"
-};
-const ActivityTypeOfWallet = {
-    Transfer: "Chuyển",
-    Cancel: "R\xfat",
-    Sell: "B\xe1n",
-    Buy: "Mua"
-};
-const WalletStatus = {
-    Processing: "Đang xử l\xfd",
-    Success: "Th\xe0nh c\xf4ng",
-    Failed: "Huỷ"
-};
 
 ;// CONCATENATED MODULE: external "moment/locale/vi"
 const vi_namespaceObject = require("moment/locale/vi");

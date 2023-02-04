@@ -20,27 +20,22 @@ class ClientApi {
     switch (value) {
       case "reqAuth":
         return headerRequestAuth(token);
-        break;
-
       case "fileReqAuth":
         return headerFileRequestAuth(token);
-        break;
-
       default:
         return headerRequest;
-        break;
     }
   }
 
   async req(
-    endpoint: string,
+    url: string,
     method: string,
     header: "req" | "reqAuth" | "fileReqAuth" = "req",
     params?: object,
     body?: any,
     token?: string
   ) {
-    const _url = this.uri + endpoint + `${params ? this.addParam(params) : ""}`;
+    const _url = url + `${params ? this.addParam(params) : ""}`;
 
     const response = await fetch(_url, {
       method: method,

@@ -1,0 +1,97 @@
+export const matchDataSource = [
+  {
+    key: '1',
+    homeTeamLogo: 'https://static.vieon.vn/vieon-images/fb-epl-logo/everton.svg',
+    homeTeamName: 'EVE',
+    matchDate: '19:30',
+    awayTeamLogo: 'https://static.vieon.vn/vieon-images/fb-epl-logo/arsenal.svg',
+    awayTeamName: 'ARS',
+  },
+  {
+    key: '11',
+    homeTeamLogo: 'https://static.vieon.vn/vieon-images/fb-epl-logo/everton.svg',
+    homeTeamName: 'EVE',
+    matchDate: '19:30',
+    awayTeamLogo: 'https://static.vieon.vn/vieon-images/fb-epl-logo/arsenal.svg',
+    awayTeamName: 'ARS',
+  },
+  {
+    key: '12',
+    homeTeamLogo: 'https://static.vieon.vn/vieon-images/fb-epl-logo/everton.svg',
+    homeTeamName: 'EVE',
+    matchDate: '19:30',
+    awayTeamLogo: 'https://static.vieon.vn/vieon-images/fb-epl-logo/arsenal.svg',
+    awayTeamName: 'ARS',
+  },
+  {
+    key: '13',
+    homeTeamLogo: 'https://static.vieon.vn/vieon-images/fb-epl-logo/everton.svg',
+    homeTeamName: 'EVE',
+    matchDate: '19:30',
+    awayTeamLogo: 'https://static.vieon.vn/vieon-images/fb-epl-logo/arsenal.svg',
+    awayTeamName: 'ARS',
+  }, {
+    key: '1',
+    homeTeamLogo: 'https://static.vieon.vn/vieon-images/fb-epl-logo/everton.svg',
+    homeTeamName: 'EVE',
+    matchDate: '19:30',
+    awayTeamLogo: 'https://static.vieon.vn/vieon-images/fb-epl-logo/arsenal.svg',
+    awayTeamName: 'ARS',
+  },
+  {
+    key: '11',
+    homeTeamLogo: 'https://static.vieon.vn/vieon-images/fb-epl-logo/everton.svg',
+    homeTeamName: 'EVE',
+    matchDate: '19:30',
+    awayTeamLogo: 'https://static.vieon.vn/vieon-images/fb-epl-logo/arsenal.svg',
+    awayTeamName: 'ARS',
+  },
+  {
+    key: '12',
+    homeTeamLogo: 'https://static.vieon.vn/vieon-images/fb-epl-logo/everton.svg',
+    homeTeamName: 'EVE',
+    matchDate: '19:30',
+    awayTeamLogo: 'https://static.vieon.vn/vieon-images/fb-epl-logo/arsenal.svg',
+    awayTeamName: 'ARS',
+  },
+  {
+    key: '13',
+    homeTeamLogo: 'https://static.vieon.vn/vieon-images/fb-epl-logo/everton.svg',
+    homeTeamName: 'EVE',
+    matchDate: '19:30',
+    awayTeamLogo: 'https://static.vieon.vn/vieon-images/fb-epl-logo/arsenal.svg',
+    awayTeamName: 'ARS',
+  },
+];
+
+export const rankDataSource = [
+  {
+    key: '1',
+    position: 1,
+    teamLogo: 'https://static.vieon.vn/vieon-images/fb-epl-logo/everton.svg',
+    teamName: 'ARS',
+    playedGames: 10,
+    goalDifference: 11,
+    points: 50,
+  },
+  {
+    key: '1',
+    position: 1,
+    teamLogo: 'https://static.vieon.vn/vieon-images/fb-epl-logo/everton.svg',
+    teamName: 'ARS',
+    playedGames: 10,
+    goalDifference: 11,
+    points: 50,
+  },
+  {
+    key: '1',
+    position: 1,
+    teamLogo: 'https://static.vieon.vn/vieon-images/fb-epl-logo/everton.svg',
+    teamName: 'ARS',
+    playedGames: 10,
+    goalDifference: 11,
+    points: 50,
+  },
+];
+
+
