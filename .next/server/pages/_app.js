@@ -30,18 +30,18 @@ function MyApp({ Component , pageProps  }) {
     const router = (0,next_router__WEBPACK_IMPORTED_MODULE_2__.useRouter)();
     const { 0: loading , 1: setLoading  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(true);
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{
-        const handleStart = (url)=>{
-            url !== router.asPath ? setLoading(true) : setLoading(false);
-        };
-        const handleComplete = (url)=>setLoading(false);
-        const scrollTop = ()=>{
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0;
-        };
-        router.events.on("routeChangeStart", handleStart);
-        router.events.on("routeChangeComplete", handleComplete);
-        router.events.on("routeChangeError", handleComplete);
-        router.events.on("routeChangeComplete", scrollTop);
+        // const handleStart = (url: string) => {
+        //   url !== router.asPath ? setLoading(true) : setLoading(false);
+        // };
+        // const handleComplete = (url: string) => setLoading(false);
+        // const scrollTop = () => {
+        //   document.body.scrollTop = 0; // For Safari
+        //   document.documentElement.scrollTop = 0;
+        // };
+        // router.events.on('routeChangeStart', handleStart);
+        // router.events.on('routeChangeComplete', handleComplete);
+        // router.events.on('routeChangeError', handleComplete);
+        // router.events.on('routeChangeComplete', scrollTop);
         setLoading(false);
     }, [
         router

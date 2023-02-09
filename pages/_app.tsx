@@ -10,20 +10,20 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const handleStart = (url: string) => {
-      url !== router.asPath ? setLoading(true) : setLoading(false);
-    };
-    const handleComplete = (url: string) => setLoading(false);
+    // const handleStart = (url: string) => {
+    //   url !== router.asPath ? setLoading(true) : setLoading(false);
+    // };
+    // const handleComplete = (url: string) => setLoading(false);
 
-    const scrollTop = () => {
-      document.body.scrollTop = 0; // For Safari
-      document.documentElement.scrollTop = 0;
-    };
+    // const scrollTop = () => {
+    //   document.body.scrollTop = 0; // For Safari
+    //   document.documentElement.scrollTop = 0;
+    // };
 
-    router.events.on('routeChangeStart', handleStart);
-    router.events.on('routeChangeComplete', handleComplete);
-    router.events.on('routeChangeError', handleComplete);
-    router.events.on('routeChangeComplete', scrollTop);
+    // router.events.on('routeChangeStart', handleStart);
+    // router.events.on('routeChangeComplete', handleComplete);
+    // router.events.on('routeChangeError', handleComplete);
+    // router.events.on('routeChangeComplete', scrollTop);
     setLoading(false);
   }, [router]);
 
