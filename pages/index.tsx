@@ -6,7 +6,7 @@ import Layout from '../components/layout';
 import { getMatches } from '../services/football';
 import { getRanks } from '../services/football';
 import styles from '../styles/Home.module.scss';
-import FootballComponent from './components/football';
+import FootballComponent from '../components/football';
 
 const HomePage: NextPage = () => {
   const [matches, setMatches] = useState<any[]>([]);

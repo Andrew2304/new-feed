@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { convertStringToDateTimeDisplay } from '../../../helpers/util';
+import { convertStringToDateTimeDisplay } from '../../helpers/util';
 
 export const useMatchColumns = () => {
   return [

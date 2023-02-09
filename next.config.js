@@ -10,6 +10,13 @@ const nextConfig = {
   },
   images: {
     domains: ['172.16.11.116', 'static.vieon.vn', 'static2.vieon.vn', 'crests.football-data.org'],
+    unoptimized: true,
+  },
+  trailingSlash: true,
+  exportPathMap: async function (defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
+    return {
+      '/': { page: '/' },
+    };
   },
 };
 

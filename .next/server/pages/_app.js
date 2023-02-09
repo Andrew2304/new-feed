@@ -5,109 +5,21 @@ exports.id = 888;
 exports.ids = [888];
 exports.modules = {
 
-/***/ 501:
+/***/ 656:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "a": () => (/* binding */ useAuth)
-/* harmony export */ });
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(853);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_0__);
-
-const login = (token, user)=>{
-    localStorage.setItem("token", token);
-    localStorage.setItem("user", JSON.stringify(user));
-};
-const logout = ()=>{
-    localStorage.removeItem("user");
-    localStorage.removeItem("token");
-    next_router__WEBPACK_IMPORTED_MODULE_0___default().push("/");
-};
-const getUser = ()=>{
-    try {
-        const value = window.localStorage.getItem("user");
-        if (value) {
-            return JSON.parse(value);
-        } else {
-            null;
-        }
-    } catch (err) {
-        return null;
-    }
-};
-const getToken = ()=>{
-    try {
-        return window.localStorage.getItem("token");
-    } catch (err) {
-        return null;
-    }
-};
-const useAuth = {
-    login,
-    logout,
-    getUser,
-    getToken
-};
-
-
-/***/ }),
-
-/***/ 360:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ _app)
-});
-
-// EXTERNAL MODULE: external "react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__(997);
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__(689);
-// EXTERNAL MODULE: external "next/router"
-var router_ = __webpack_require__(853);
-// EXTERNAL MODULE: external "antd"
-var external_antd_ = __webpack_require__(725);
-// EXTERNAL MODULE: ./hooks/useAuth.ts
-var useAuth = __webpack_require__(501);
-;// CONCATENATED MODULE: ./helpers/constants.ts
-const OtpTime = 30;
-const PasswordValidation = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[`!@#$%^&*()~])[A-Za-z\d`!@#$%^&*()~]{8,}$/;
-const EmailValidation = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-const BlockchainValidation = /^0x[a-fA-F0-9]{40}$/g;
-const PrivateRouter = [
-    "/nft/create",
-    "/wallet",
-    "/collection/create"
-];
-const FileType = (/* unused pure expression or super */ null && ([
-    "jpg",
-    "png",
-    "jpeg",
-    "jjpeg"
-]));
-const FileSize = (/* unused pure expression or super */ null && (1024 * 1024 * 100));
-const GetFileType = (filename)=>{
-    const type = filename.substring(filename.lastIndexOf(".") + 1, filename.length) || filename;
-    return type.toLocaleLowerCase();
-};
-const DateFormatNft = "dd/mm/yyyy hh:MM";
-const DateFormatCollection = "dd/mm/yyyy";
-const DefaultPageSize = 15;
-
-;// CONCATENATED MODULE: external "moment/locale/vi"
-const vi_namespaceObject = require("moment/locale/vi");
-;// CONCATENATED MODULE: external "antd/lib/locale/vi_VN"
-const vi_VN_namespaceObject = require("antd/lib/locale/vi_VN");
-var vi_VN_default = /*#__PURE__*/__webpack_require__.n(vi_VN_namespaceObject);
-;// CONCATENATED MODULE: ./pages/_app.tsx
-
-
-
-
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(853);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(725);
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
@@ -115,22 +27,15 @@ var vi_VN_default = /*#__PURE__*/__webpack_require__.n(vi_VN_namespaceObject);
 
 
 function MyApp({ Component , pageProps  }) {
-    const router = (0,router_.useRouter)();
-    const { 0: loading , 1: setLoading  } = (0,external_react_.useState)(true);
-    (0,external_react_.useEffect)(()=>{
-        const authCheck = ()=>{
-            if (!useAuth/* useAuth.getUser */.a.getUser() && PrivateRouter.includes(router.asPath)) {
-                router.push("/login");
-            }
-        };
-        authCheck();
+    const router = (0,next_router__WEBPACK_IMPORTED_MODULE_2__.useRouter)();
+    const { 0: loading , 1: setLoading  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(true);
+    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{
         const handleStart = (url)=>{
             url !== router.asPath ? setLoading(true) : setLoading(false);
         };
         const handleComplete = (url)=>setLoading(false);
         const scrollTop = ()=>{
-            document.body.scrollTop = 0 // For Safari
-            ;
+            document.body.scrollTop = 0; // For Safari
             document.documentElement.scrollTop = 0;
         };
         router.events.on("routeChangeStart", handleStart);
@@ -141,22 +46,21 @@ function MyApp({ Component , pageProps  }) {
     }, [
         router
     ]);
-    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(external_antd_.ConfigProvider, {
-        locale: (vi_VN_default()),
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(antd__WEBPACK_IMPORTED_MODULE_3__.ConfigProvider, {
         children: [
-            /*#__PURE__*/ jsx_runtime_.jsx(Component, {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Component, {
                 ...pageProps
             }),
-            loading && /*#__PURE__*/ jsx_runtime_.jsx("div", {
+            loading && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                 className: "wrap-loading",
-                children: /*#__PURE__*/ jsx_runtime_.jsx(external_antd_.Spin, {
+                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(antd__WEBPACK_IMPORTED_MODULE_3__.Spin, {
                     size: "large"
                 })
             })
         ]
     });
 }
-/* harmony default export */ const _app = (MyApp);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MyApp);
 
 
 /***/ }),
@@ -196,7 +100,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(360));
+var __webpack_exports__ = (__webpack_exec__(656));
 module.exports = __webpack_exports__;
 
 })();
