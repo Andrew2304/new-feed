@@ -6,7 +6,9 @@ import Layout from '../components/layout';
 import { getMatches } from '../services/football';
 import { getRanks } from '../services/football';
 import styles from '../styles/Home.module.scss';
-import FootballComponent from '../components/football';
+import MatchComponent from '../components/football/match';
+import RankComponent from '../components/football/rank';
+import RankCoinComponent from '../components/coin/rank';
 
 const HomePage: NextPage = () => {
   const [matches, setMatches] = useState<any[]>([]);
@@ -33,40 +35,46 @@ const HomePage: NextPage = () => {
   return (
     <Layout pageName='HomePage'>
       <Head>
-        <title>NFT</title>
-        <meta name='description' content='NFT' />
+        <title>NewFeeds</title>
+        <meta name='description' content='NewFeeds' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <div className={styles.homePage}>
         <Row>
           <Col md={8} xs={24}>
-            <Card title='Anh'>
-              <FootballComponent matches={matches} ranks={ranks} tab={'1'} />
+            <Card title='Matches'>
+              <MatchComponent
+                matches={{
+                  engMatches: { title: 'Eng', data: matches },
+                }}
+                tab={'1'}
+              />
             </Card>
           </Col>
           <Col md={8} xs={24}>
-            <Card title='Anh'>
-              <FootballComponent matches={matches} ranks={ranks} tab={'2'} />
+            <Card title='Ranks'>
+              <RankComponent
+                matches={matches}
+                ranks={{
+                  engRanks: { title: 'Eng', data: ranks },
+                  spanRanks: { title: 'Span', data: spanRanks },
+                  gerRanks: { title: 'Ger', data: gerRanks },
+                  freRanks: { title: 'Fre', data: freRanks },
+                  itaRanks: { title: 'Ita', data: itaRanks },
+                }}
+                tab={'2'}
+              />
             </Card>
           </Col>
           <Col md={8} xs={24}>
-            <Card title='Tây Ban Nha'>
-              <FootballComponent matches={matches} ranks={spanRanks} tab={'2'} />
-            </Card>
-          </Col>
-          <Col md={8} xs={24}>
-            <Card title='Ý'>
-              <FootballComponent matches={matches} ranks={itaRanks} tab={'2'} />
-            </Card>
-          </Col>
-          <Col md={8} xs={24}>
-            <Card title='Đức'>
-              <FootballComponent matches={matches} ranks={gerRanks} tab={'2'} />
-            </Card>
-          </Col>
-          <Col md={8} xs={24}>
-            <Card title='Pháp'>
-              <FootballComponent matches={matches} ranks={freRanks} tab={'2'} />
+            <Card title='Coin'>
+              <RankCoinComponent
+                matches={matches}
+                ranks={{
+                  engRanks: { title: 'Binance', data: ranks },
+                }}
+                tab={'2'}
+              />
             </Card>
           </Col>
         </Row>

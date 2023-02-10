@@ -8,7 +8,7 @@ export const useMatchColumns = () => {
       dataIndex: 'homeTeamLogo',
       key: 'homeTeamLogo',
       render: (text: any, record: any) => (
-        <Image src={record.homeTeamLogo} width={40} height={40} />
+        <Image src={record.homeTeamLogo} width={'40px'} height={'40px'} />
       ),
     },
     {
@@ -27,7 +27,7 @@ export const useMatchColumns = () => {
       dataIndex: 'awayTeamLogo',
       key: 'awayTeamLogo',
       render: (text: any, record: any) => (
-        <Image src={record.awayTeamLogo} width={40} height={40} />
+        <Image src={record.awayTeamLogo} width={'40px'} height={'40px'} />
       ),
     },
     {
